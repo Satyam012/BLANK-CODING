@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+      <form action="file.html" class="login-form">
+        <a href="file.html"><img src="img/logo.png" alt="company-logo" style="width: 100px; display: block; margin-left: auto; margin-right: auto; border-radius: 40%;"></a>
+        <h1 style="padding-top: 10px;">Login</h1>
+
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Username"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password">
+          <span data-placeholder="Password"></span>
+        </div>
+        
+        <div class="rightside" style="margin-left: 60px;"><button>LOGIN</button></div>
+      
+        <div class="bottom-text" style="font-size: large;">
+         <b>Don't have account? </b> <a href="signup.html">Sign up</a>
+        </div>
+
+      </form>
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+
+  </body>
+</html>

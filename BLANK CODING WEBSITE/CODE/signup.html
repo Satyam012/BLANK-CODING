@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+      <form class="login-form" action="file.html">
+        <h1 style="text-shadow: 3px 2px red;">Sign Up</h1>
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="First name"></span>
+        </div>
+        <div class="txtb">
+            <input type="text">
+            <span data-placeholder="Last name"></span>
+          </div>
+        <div class="txtb">
+            <input type="email">
+            <span data-placeholder="Enter your email"></span>
+        </div> 
+        <div class="txtb">
+            <input type="password">
+            <span data-placeholder="Password"></span>
+          </div>
+        <div style="display: inline-flex;">
+        <div class="form-check-inline" style="margin: 0 10px;">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio">Male
+            </label>
+          </div>
+          <div class="form-check-inline"  style="margin-right: 10px;">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio">Female
+            </label>
+          </div>
+          <div class="form-check-inline disabled"  style="margin-right: 10px;">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio">Other
+            </label>
+          </div>
+        </div>
+        <div class="rightside" style="margin-left: 60px; margin-top: 10px;"><button type="submit">SUBMIT</button></div>
+      </form>
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+
+  </body>
+</html>
